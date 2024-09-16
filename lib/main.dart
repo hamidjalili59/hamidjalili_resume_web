@@ -25,16 +25,21 @@ class Application extends StatelessWidget {
               Row(
                 children: [
                   Expanded(
-                    child: DeviceFrame(
-                      device: Devices.ios.iPhone13ProMax,
-                      isFrameVisible: true,
-                      orientation: Orientation.portrait,
-                      screen: const DeviceWidget(),
+                    child: UnconstrainedBox(
+                      child: SizedBox(
+                        height: MediaQuery.of(context).size.height * .8,
+                        child: DeviceFrame(
+                          device: Devices.ios.iPhone13ProMax,
+                          isFrameVisible: true,
+                          orientation: Orientation.portrait,
+                          screen: const DeviceWidget(),
+                        ),
+                      ),
                     ),
                   ),
                   const SizedBox(width: 50),
                   const Expanded(
-                    flex: 2,
+                    flex: 1,
                     child: Text(
                       'Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet ',
                       style: TextStyle(
@@ -74,7 +79,7 @@ class _DeviceWidgetState extends State<DeviceWidget> {
       (timeStamp) async {
         await _controller.loadRequest(
           LoadRequestParams(
-            uri: Uri.parse('https://flutter.dev'),
+            uri: Uri.parse('https://hamidjalili59.github.io/cartam_web_view/'),
           ),
         );
         setState(() {
