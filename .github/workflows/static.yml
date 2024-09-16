@@ -46,6 +46,7 @@ jobs:
         run: |
           sed -i '/<base href="\/">/d' ./build/web/index.html
 
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
