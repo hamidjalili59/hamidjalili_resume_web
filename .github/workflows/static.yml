@@ -42,9 +42,10 @@ jobs:
       - name: Build Flutter web
         run: flutter build web --wasm --release --pwa-strategy=none
 
-      # - name: Modify index.html
-      #   run: |
-      #     sed -i '/<base href="\/">/d' ./build/web/index.html
+      - name: Modify index.html
+        run: |
+          sed -i '/<base href="\/">/d' ./build/web/index.html
+
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
