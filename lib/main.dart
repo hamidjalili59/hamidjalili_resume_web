@@ -25,20 +25,32 @@ class Application extends StatelessWidget {
             child: PageView.builder(
               scrollBehavior: AppScrollBehavior(),
               scrollDirection: Axis.vertical,
-              itemCount: 3,
+              itemCount: 4,
               itemBuilder: (context, index) => ApplicationViewWidget(
-                link: [touriperLink, cartamLink, quranLink][index],
+                link: [
+                  touriperLink,
+                  cartamLink,
+                  quranLink,
+                  lingojooLink,
+                ][index],
                 iconLink: [
                   'assets/pngs/touriper.png',
                   'assets/pngs/cartam.png',
-                  'assets/pngs/quran.webp'
+                  'assets/pngs/quran.webp',
+                  'assets/pngs/lingojoo.png',
                 ][index],
-                description: [touriperDesc, cartamDesc, quranDesc][index],
-                title: ['توریپر', 'کارتام', 'قرآن'][index],
+                description: [
+                  touriperDesc,
+                  cartamDesc,
+                  quranDesc,
+                  lingojooDesc,
+                ][index],
+                title: ['توریپر', 'کارتام', 'قرآن', 'لینگوجو'][index],
                 primaryColor: [
                   touriperColor,
                   cartamColor,
                   quranColor,
+                  lingojooColor,
                 ][index],
               ),
             ),
