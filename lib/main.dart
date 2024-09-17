@@ -71,7 +71,7 @@ class ApplicationViewWidget extends StatelessWidget {
         Expanded(
           flex: 3,
           child: ColoredBox(
-            color: const Color(0xff000090),
+            color: primaryColor,
             child: SizedBox.expand(
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
